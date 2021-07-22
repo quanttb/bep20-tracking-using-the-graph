@@ -38,18 +38,23 @@ docker-compose up
 ### Deploy an example smart contract to Ganache
 
 ```sh
+cd ../../bep20-tracking-subgraph
 truffle compile
 truffle migrate
 ```
 
 Then copy GravatarRegistry contract address.
-0xbbD91F5f1141E7d29D6A34c53D0B8ceB90C4693F
 
 ### Deploy the subgraph to the local Graph Node
 
 ```sh
-
+sed -i -e 's/0x2E645469f354BB4F5c8a05B3b30A929361cf77eC/<CONTRACT_ADDRESS>/g' subgraph.yaml
+yarn && yarn codegen
+yarn create-local
+yarn deploy-local
 ```
+
+Now you can access: http://127.0.0.1:8000/subgraphs/name/quanttb/bep20-tracking/graphql
 
 ## Contribution
 
