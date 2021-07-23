@@ -12,8 +12,15 @@
 - ganache-cli
 - @graphprotocol/graph-cli
   - npm install -g yarn truffle ganache-cli @graphprotocol/graph-cli
+- jq
 - docker
 - docker-compose
+
+Then run this script:
+
+```sh
+git submodule update --init --recursive
+```
 
 ## Useful links
 
@@ -38,7 +45,8 @@ docker-compose up
 ### Deploy an example smart contract to Ganache
 
 ```sh
-cd ../../bep20-tracking-subgraph
+cd bep20-tracking-subgraph
+yarn
 truffle compile
 truffle migrate
 ```
@@ -49,7 +57,7 @@ Then copy GravatarRegistry contract address.
 
 ```sh
 sed -i -e 's/0x2E645469f354BB4F5c8a05B3b30A929361cf77eC/<CONTRACT_ADDRESS>/g' subgraph.yaml
-yarn && yarn codegen
+yarn codegen
 yarn create-local
 yarn deploy-local
 ```
