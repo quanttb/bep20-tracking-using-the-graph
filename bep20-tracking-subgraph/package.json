@@ -1,6 +1,6 @@
 {
   "name": "bep20-tracking",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "scripts": {
     "build-contract": "solc contracts/Gravity.sol --abi -o abis --overwrite && solc contracts/Gravity.sol --bin -o bin --overwrite",
     "create": "graph create quanttb/bep20-tracking --node https://api.thegraph.com/deploy/",
@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.20.1",
-    "@graphprotocol/graph-ts": "^0.20.0"
+    "@graphprotocol/graph-ts": "^0.20.0",
+    "@openzeppelin/contracts": "^4.2.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",

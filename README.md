@@ -25,6 +25,7 @@ git submodule update --init --recursive
 ## Useful links
 
 [The Graph Quick Start](https://thegraph.com/docs/developer/quick-start)
+[Create a Subgraph](https://thegraph.com/docs/developer/create-subgraph-hosted)
 
 ## Execution
 
@@ -51,12 +52,12 @@ truffle compile
 truffle migrate
 ```
 
-Then copy GravatarRegistry contract address.
+Then copy TokenplayToken contract address.
 
 ### Deploy the subgraph to the local Graph Node
 
 ```sh
-sed -i -e 's/0x2E645469f354BB4F5c8a05B3b30A929361cf77eC/<CONTRACT_ADDRESS>/g' subgraph.yaml
+sed -i -e 's/0x0000000000000000000000000000000000000000/<CONTRACT_ADDRESS>/g' subgraph.yaml
 yarn codegen
 yarn create-local
 yarn deploy-local

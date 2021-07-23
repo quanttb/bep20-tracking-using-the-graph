@@ -1,5 +1,6 @@
-const GravatarRegistry = artifacts.require('./GravatarRegistry.sol')
+const TokenplayToken = artifacts.require('./TokenplayToken.sol');
 
 module.exports = async function(deployer) {
-  await deployer.deploy(GravatarRegistry)
-}
+  const initialBalance = web3.utils.toWei('1000000');
+  await deployer.deploy(TokenplayToken, initialBalance);
+};
