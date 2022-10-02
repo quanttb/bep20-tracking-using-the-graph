@@ -1,0 +1,23 @@
+{
+  "name": "bep20-tracking",
+  "version": "0.0.2",
+  "scripts": {
+    "ganache": "ganache-cli -h 0.0.0.0",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "codegen": "graph codegen",
+    "create-local": "graph create quanttb/bep20-tracking --node http://127.0.0.1:8020",
+    "deploy-local": "graph deploy quanttb/bep20-tracking --ipfs http://127.0.0.1:5001 --node http://127.0.0.1:8020"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.20.1",
+    "@graphprotocol/graph-ts": "^0.20.0",
+    "@openzeppelin/contracts": "^4.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "ganache-cli": "^6.12.2",
+    "truffle": "^5.0.4",
+    "truffle-contract": "^4.0.5",
+    "truffle-hdwallet-provider": "^1.0.4"
+  }
+}

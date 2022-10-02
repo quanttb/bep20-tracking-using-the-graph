@@ -3,24 +3,15 @@
 ## Overview
 
 - BEP20 tracking using [The Graph](https://thegraph.com/)
+- Tested on MacOS 12.6
 
 ## The following prerequisites are required to be installed on your system:
 
 - node
 - yarn
-- truffle
-- ganache-cli
-- @graphprotocol/graph-cli
-  - npm install -g yarn truffle ganache-cli @graphprotocol/graph-cli
 - jq
 - docker
 - docker-compose
-
-Then run this script:
-
-```sh
-git submodule update --init --recursive
-```
 
 ## Useful links
 
@@ -32,24 +23,21 @@ git submodule update --init --recursive
 ### Setup local environment
 
 ```sh
-ganache-cli -h 0.0.0.0
+yarn ganache
 ```
 
 ### Run a local Graph Node
 
 ```sh
-cd graph-node/docker
-./setup.sh
 docker-compose up
 ```
 
 ### Deploy an example smart contract to Ganache
 
 ```sh
-cd bep20-tracking-subgraph
 yarn
-truffle compile
-truffle migrate
+yarn compile
+yarn migrate
 ```
 
 Then copy TokenplayToken contract address.
